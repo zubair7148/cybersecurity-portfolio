@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Muhammad Zubair Mirza — Senior Cybersecurity GRC & Resilience Consultant</title>
+<link rel="stylesheet" href="https://unpkg.com/@tabler/icons-webfont@latest/tabler-icons.min.css">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#ffffff;--bg-sec:#f7f7f5;--bg-ter:#f0efed;
+  --text:#1a1a1a;--text-sec:#666660;--text-ter:#999993;
+  --border:rgba(0,0,0,0.1);--border-sec:rgba(0,0,0,0.15);
+  --green:#1D9E75;--radius:8px;--radius-lg:12px
+}
+@media(prefers-color-scheme:dark){:root{
+  --bg:#1a1a1a;--bg-sec:#242424;--bg-ter:#2e2e2e;
+  --text:#f0f0ee;--text-sec:#a0a09a;--text-ter:#666660;
+  --border:rgba(255,255,255,0.1);--border-sec:rgba(255,255,255,0.15)
+}}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:var(--text);background:var(--bg);line-height:1.6}
+a{color:inherit;text-decoration:none}
+.site{max-width:900px;margin:0 auto;padding:0 2rem 5rem}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:1.5rem 0;border-bottom:0.5px solid var(--border)}
+.nav-logo{font-size:15px;font-weight:500}
+.nav-links{display:flex;gap:2rem}
+.nav-links a{font-size:13px;color:var(--text-sec);transition:color 0.2s}
+.nav-links a:hover{color:var(--text)}
+.hero{padding:5rem 0 4rem;border-bottom:0.5px solid var(--border)}
+.hero-badge{display:inline-flex;align-items:center;gap:6px;background:var(--bg-sec);border:0.5px solid var(--border);border-radius:999px;padding:4px 12px;font-size:12px;color:var(--text-sec);margin-bottom:2rem}
+.hero-badge span{width:6px;height:6px;border-radius:50%;background:var(--green);flex-shrink:0}
+.hero h1{font-size:42px;font-weight:500;line-height:1.15;margin-bottom:1rem;letter-spacing:-0.02em}
+.hero h1 em{font-style:normal;color:var(--text-sec)}
+.hero-sub{font-size:17px;color:var(--text-sec);line-height:1.7;max-width:580px;margin-bottom:2rem}
+.cert-row{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:2.5rem}
+.cert-pill{font-size:12px;font-weight:500;padding:4px 10px;border-radius:999px;border:0.5px solid var(--border);color:var(--text-sec);background:var(--bg-sec)}
+.hero-cta{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+.btn-primary{display:inline-flex;align-items:center;gap:6px;background:var(--text);color:var(--bg);border:none;border-radius:var(--radius);padding:10px 20px;font-size:14px;font-weight:500;cursor:pointer;transition:opacity 0.2s}
+.btn-primary:hover{opacity:0.85}
+.btn-secondary{display:inline-flex;align-items:center;gap:6px;background:transparent;color:var(--text);border:0.5px solid var(--border-sec);border-radius:var(--radius);padding:10px 20px;font-size:14px;font-weight:500;cursor:pointer;transition:background 0.2s}
+.btn-secondary:hover{background:var(--bg-sec)}
+.stats-row{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);border:0.5px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;margin:3rem 0}
+.stat{background:var(--bg);padding:1.5rem 1.25rem}
+.stat-num{font-size:28px;font-weight:500;line-height:1;margin-bottom:4px}
+.stat-label{font-size:12px;color:var(--text-sec)}
+.section{padding:4rem 0;border-bottom:0.5px solid var(--border)}
+.section-label{font-size:11px;font-weight:500;text-transform:uppercase;letter-spacing:0.08em;color:var(--text-sec);margin-bottom:1.5rem}
+.section h2{font-size:26px;font-weight:500;margin-bottom:1rem;letter-spacing:-0.01em}
+.section-intro{font-size:15px;color:var(--text-sec);line-height:1.7;max-width:600px;margin-bottom:2.5rem}
+.services-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--border);border:0.5px solid var(--border);border-radius:var(--radius-lg);overflow:hidden}
+.service-card{background:var(--bg);padding:1.5rem;display:flex;flex-direction:column;gap:8px}
+.service-icon{width:32px;height:32px;border-radius:var(--radius);background:var(--bg-sec);display:flex;align-items:center;justify-content:center;margin-bottom:4px}
+.service-icon i{font-size:16px;color:var(--text-sec)}
+.service-card h3{font-size:14px;font-weight:500}
+.service-card p{font-size:13px;color:var(--text-sec);line-height:1.5}
+.clients-list{display:flex;flex-direction:column}
+.client-row{display:flex;align-items:flex-start;gap:1.5rem;padding:1.25rem 0;border-bottom:0.5px solid var(--border)}
+.client-row:last-child{border-bottom:none}
+.client-sector{width:90px;flex-shrink:0;padding-top:2px}
+.sector-badge{font-size:11px;padding:3px 8px;border-radius:999px;background:var(--bg-sec);color:var(--text-sec);border:0.5px solid var(--border);white-space:nowrap;display:inline-block}
+.client-info h4{font-size:14px;font-weight:500;margin-bottom:3px}
+.client-info p{font-size:13px;color:var(--text-sec);line-height:1.5}
+.certs-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.cert-card{background:var(--bg-sec);border:0.5px solid var(--border);border-radius:var(--radius-lg);padding:1.25rem}
+.cert-issuer{font-size:11px;color:var(--text-sec);margin-bottom:6px}
+.cert-card h4{font-size:13px;font-weight:500;line-height:1.4}
+.cert-status{font-size:11px;margin-top:8px;color:var(--text-sec)}
+.cert-active{color:var(--green) !important}
+.edu-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px}
+.regions-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.region-card{background:var(--bg-sec);border:0.5px solid var(--border);border-radius:var(--radius-lg);padding:1.25rem}
+.region-card h4{font-size:13px;font-weight:500;margin-bottom:10px;display:flex;align-items:center;gap:6px}
+.region-card h4 i{font-size:15px;color:var(--text-sec)}
+.tag-wrap{display:flex;flex-wrap:wrap;gap:6px}
+.tag{font-size:11px;padding:3px 8px;border-radius:999px;background:var(--bg);border:0.5px solid var(--border);color:var(--text-sec)}
+.fiverr-card{background:var(--bg-sec);border:0.5px solid var(--border);border-radius:var(--radius-lg);padding:1.5rem;display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;flex-wrap:wrap;gap:1rem}
+.fiverr-left h4{font-size:14px;font-weight:500;margin-bottom:4px}
+.fiverr-left p{font-size:13px;color:var(--text-sec)}
+.fiverr-stats{display:flex;gap:2rem}
+.fiverr-stat{text-align:center}
+.fiverr-stat .fn{font-size:20px;font-weight:500}
+.fiverr-stat .fl{font-size:11px;color:var(--text-sec)}
+.contact-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px}
+.contact-card{background:var(--bg-sec);border:0.5px solid var(--border);border-radius:var(--radius-lg);padding:1.25rem;display:flex;align-items:center;gap:12px}
+.contact-card i{font-size:18px;color:var(--text-sec);flex-shrink:0}
+.contact-card a{font-size:13px;color:var(--text);word-break:break-all}
+.contact-label{font-size:11px;color:var(--text-sec);margin-bottom:2px}
+footer{padding:2rem 0;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px}
+footer p{font-size:12px;color:var(--text-sec)}
+@media(max-width:600px){
+  .hero h1{font-size:28px}
+  .stats-row{grid-template-columns:repeat(2,1fr)}
+  .services-grid{grid-template-columns:1fr}
+  .certs-grid{grid-template-columns:1fr 1fr}
+  .edu-grid{grid-template-columns:1fr}
+  .regions-grid{grid-template-columns:1fr}
+  .contact-row{grid-template-columns:1fr}
+  .client-row{flex-direction:column;gap:8px}
+  .client-sector{width:auto}
+  .nav-links{display:none}
+}
+</style>
+</head>
+<body>
+<div class="site">
+
+  <nav class="nav">
+    <div class="nav-logo">Muhammad Zubair Mirza</div>
+    <div class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#clients">Clients</a>
+      <a href="#credentials">Credentials</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-badge"><span></span>Available for engagements</div>
+    <h1>Senior Cybersecurity GRC<br><em>&amp; Resilience Consultant</em></h1>
+    <p class="hero-sub">9+ years delivering ISO 27001, BCM, NCA ECC, SAMA CSF, and UAE IA engagements for regulated entities across Saudi Arabia, UAE, and the GCC. Finland-based, globally available.</p>
+    <div class="cert-row">
+      <span class="cert-pill">CISM</span>
+      <span class="cert-pill">ISO 27001:2022 Lead Auditor</span>
+      <span class="cert-pill">CCSK</span>
+      <span class="cert-pill">CEH</span>
+      <span class="cert-pill">CC — ISC2</span>
+      <span class="cert-pill">CISSP in progress</span>
+    </div>
+    <div class="hero-cta">
+      <a href="mailto:mirza.zubair714@gmail.com" class="btn-primary">
+        <i class="ti ti-mail"></i>Get in touch
+      </a>
+      <a href="https://www.fiverr.com/zubair714" target="_blank" class="btn-secondary">
+        <i class="ti ti-external-link"></i>View Fiverr profile
+      </a>
+    </div>
+  </section>
+
+  <div class="stats-row">
+    <div class="stat"><div class="stat-num">9+</div><div class="stat-label">Years of experience</div></div>
+    <div class="stat"><div class="stat-num">18+</div><div class="stat-label">Regulated clients</div></div>
+    <div class="stat"><div class="stat-num">6</div><div class="stat-label">Industry sectors</div></div>
+    <div class="stat"><div class="stat-num">5.0</div><div class="stat-label">Fiverr rating (37 orders)</div></div>
+  </div>
+
+  <section class="section" id="services">
+    <div class="section-label">Services</div>
+    <h2>Core competencies</h2>
+    <p class="section-intro">Specialist GRC and resilience consulting across regulatory compliance, business continuity, IT audit, OT security, and AI governance.</p>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon"><i class="ti ti-shield-check"></i></div>
+        <h3>GRC &amp; compliance</h3>
+        <p>ISO 27001:2022, NCA ECC, SAMA CSF, UAE IA, ADHICS, GDPR, KSA PDPL, UAE PDPL — gap assessment, implementation, and maturity assessment</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><i class="ti ti-refresh-alert"></i></div>
+        <h3>Business continuity</h3>
+        <p>BCM, BCP, DRP, and BIA development aligned to ISO 22301 and SAMA BCMF for regulated financial services and critical infrastructure</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><i class="ti ti-checklist"></i></div>
+        <h3>IT audit</h3>
+        <p>ITGCs, ITACs, data center security controls, application controls, and branchless banking audits for banking and financial services</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><i class="ti ti-circuit-board"></i></div>
+        <h3>OT/ICS security</h3>
+        <p>ISO 62443 assessments and risk management for critical infrastructure including oil and gas, power generation, and utilities</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><i class="ti ti-brain"></i></div>
+        <h3>AI governance</h3>
+        <p>ISO 42001 implementation, NIST AI RMF and EU AI Act assessment and compliance for organisations deploying AI-driven systems</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><i class="ti ti-presentation"></i></div>
+        <h3>IS awareness training</h3>
+        <p>Custom information security awareness programme development, delivery, and effectiveness measurement for regulated organisations</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="clients">
+    <div class="section-label">Engagements</div>
+    <h2>Key client engagements</h2>
+    <p class="section-intro">Delivered across banking, energy, defence, healthcare, telecom, and critical infrastructure in Saudi Arabia, UAE, and Pakistan.</p>
+    <div class="clients-list">
+      <div class="client-row">
+        <div class="client-sector"><span class="sector-badge">Energy</span></div>
+        <div class="client-info">
+          <h4>ADNOC &amp; ADNOC Offshore — UAE</h4>
+          <p>Digital Business Continuity Management (DBCM) maturity assessment; OT cybersecurity assessment and risk management aligned to ISO 62443</p>
+        </div>
+      </div>
+      <div class="client-row">
+        <div class="client-sector"><span class="sector-badge">Defence</span></div>
+        <div class="client-info">
+          <h4>TAWAZUN Council — UAE</h4>
+          <p>Defence-sector UAE IA and NIST CSF compliance and maturity assessments</p>
+        </div>
+      </div>
+      <div class="client-row">
+        <div class="client-sector"><span class="sector-badge">Banking</span></div>
+        <div class="client-info">
+          <h4>BUPA Arabia &amp; BSF Capital — KSA</h4>
+          <p>SAMA CSF and SAMA BCMF compliance and maturity assessment; NCA ECC compliance assessment and cybersecurity strategy roadmap</p>
+        </div>
+      </div>
+      <div class="client-row">
+        <div class="client-sector"><span class="sector-badge">Telecom</span></div>
+        <div class="client-info">
+          <h4>GO Telecom — KSA</h4>
+          <p>ISO 27001:2022 and NCA ECC/CCC full audit and implementation</p>
+        </div>
+      </div>
+      <div class="client-row">
+        <div class="client-sector"><span class="sector-badge">Healthcare</span></div>
+        <div class="client-info">
+          <h4>Emirates International Hospital — UAE</h4>
+          <p>ADHICS compliance consultancy</p>
+        </div>
+      </div>
+      <div class="client-row">
+        <div class="client-sector"><span class="sector-badge">Energy</span></div>
+        <div class="client-info">
+          <h4>FAPCO &amp; Emirates Steel Arkan — UAE</h4>
+          <p>DoE CSF assessment, framework development, and cybersecurity roadmap; UAE IA information security audit</p>
+        </div>
+      </div>
+      <div class="client-row">
+        <div class="client-sector"><span class="sector-badge">Banking</span></div>
+        <div class="client-info">
+          <h4>GO Money, Wall Street Exchange, Introspect Capital</h4>
+          <p>SAMA CSF and BCM framework development; ISMS audit and implementation; ISMS framework development</p>
+        </div>
+      </div>
+      <div class="client-row">
+        <div class="client-sector"><span class="sector-badge">Additional</span></div>
+        <div class="client-info">
+          <h4>Further GCC engagements</h4>
+          <p>MIPCO, SCIPCO, TradEx, SINYAR Holding, EdenRed, TAKWEEN AI — full details available on request</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="credentials">
+    <div class="section-label">Credentials</div>
+    <h2>Certifications &amp; education</h2>
+    <p class="section-intro">Professional certifications from globally recognised bodies in cybersecurity, audit, and cloud security.</p>
+    <div class="certs-grid">
+      <div class="cert-card">
+        <div class="cert-issuer">ISACA</div>
+        <h4>Certified Information Security Manager (CISM)</h4>
+        <div class="cert-status cert-active">Active</div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-issuer">IRCA</div>
+        <h4>ISO 27001:2022 Lead Auditor</h4>
+        <div class="cert-status cert-active">Active</div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-issuer">Cloud Security Alliance</div>
+        <h4>Certificate of Cloud Security Knowledge (CCSK)</h4>
+        <div class="cert-status cert-active">Active</div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-issuer">EC-Council</div>
+        <h4>Certified Ethical Hacker (CEH)</h4>
+        <div class="cert-status cert-active">Active</div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-issuer">ISC2</div>
+        <h4>Certified in Cybersecurity (CC)</h4>
+        <div class="cert-status cert-active">Active</div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-issuer">ISC2</div>
+        <h4>CISSP — Certified Information Systems Security Professional</h4>
+        <div class="cert-status">In progress — targeting 2026</div>
+      </div>
+    </div>
+    <div class="edu-grid">
+      <div class="cert-card">
+        <div class="cert-issuer">Tampere University, Finland</div>
+        <h4>MSc Information Technology — Information Security</h4>
+        <div class="cert-status cert-active">Graduated December 2025</div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-issuer">Riphah International University, Islamabad</div>
+        <h4>MS Information Security</h4>
+        <div class="cert-status cert-active">Graduated 2019</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-label">Regional expertise</div>
+    <h2>Frameworks by geography</h2>
+    <p class="section-intro">Deep knowledge of GCC regulatory frameworks alongside EU, UK, and international standards.</p>
+    <div class="regions-grid">
+      <div class="region-card">
+        <h4><i class="ti ti-flag"></i>Saudi Arabia</h4>
+        <div class="tag-wrap">
+          <span class="tag">NCA ECC</span><span class="tag">NCA CCC</span><span class="tag">NCA OTCC</span><span class="tag">SAMA CSF</span><span class="tag">SAMA BCMF</span><span class="tag">KSA PDPL</span><span class="tag">Vision 2030</span>
+        </div>
+      </div>
+      <div class="region-card">
+        <h4><i class="ti ti-flag"></i>UAE</h4>
+        <div class="tag-wrap">
+          <span class="tag">UAE IA</span><span class="tag">ADHICS</span><span class="tag">Dubai ISR</span><span class="tag">UAE PDPL</span><span class="tag">NESA</span>
+        </div>
+      </div>
+      <div class="region-card">
+        <h4><i class="ti ti-flag"></i>EU &amp; international</h4>
+        <div class="tag-wrap">
+          <span class="tag">GDPR</span><span class="tag">DORA</span><span class="tag">NIS2</span><span class="tag">EU AI Act</span><span class="tag">ISO 27001</span><span class="tag">ISO 22301</span><span class="tag">ISO 42001</span><span class="tag">NIST CSF</span><span class="tag">NIST AI RMF</span>
+        </div>
+      </div>
+      <div class="region-card">
+        <h4><i class="ti ti-flag"></i>UK</h4>
+        <div class="tag-wrap">
+          <span class="tag">Cyber Essentials</span><span class="tag">Cyber Essentials Plus</span><span class="tag">NCSC CAF</span><span class="tag">UK GDPR</span><span class="tag">Data Protection Act 2018</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="contact">
+    <div class="section-label">Fiverr &amp; freelance</div>
+    <h2>Hire me</h2>
+    <p class="section-intro">Available for independent engagements through Fiverr or direct contact. Serving EU, UK, GCC, and international clients since 2021.</p>
+    <div class="fiverr-card">
+      <div class="fiverr-left">
+        <h4>@zubair714 on Fiverr</h4>
+        <p>Level 2 seller — BCM/BCP/DRP, NCA ECC, IT audit, ISO 27001 policies, ISMS audit, IS awareness training</p>
+      </div>
+      <div class="fiverr-stats">
+        <div class="fiverr-stat"><div class="fn">5.0</div><div class="fl">Rating</div></div>
+        <div class="fiverr-stat"><div class="fn">37</div><div class="fl">Orders</div></div>
+        <div class="fiverr-stat"><div class="fn">L2</div><div class="fl">Level</div></div>
+      </div>
+    </div>
+    <div class="contact-row">
+      <div class="contact-card">
+        <i class="ti ti-mail"></i>
+        <div><div class="contact-label">Email</div><a href="mailto:mirza.zubair714@gmail.com">mirza.zubair714@gmail.com</a></div>
+      </div>
+      <div class="contact-card">
+        <i class="ti ti-brand-linkedin"></i>
+        <div><div class="contact-label">LinkedIn</div><a href="https://www.linkedin.com/in/muhammadzubair-mirza-73a366119" target="_blank">Muhammad Zubair Mirza</a></div>
+      </div>
+      <div class="contact-card">
+        <i class="ti ti-map-pin"></i>
+        <div><div class="contact-label">Location</div><a>Tampere, Finland — available globally</a></div>
+      </div>
+      <div class="contact-card">
+        <i class="ti ti-external-link"></i>
+        <div><div class="contact-label">Fiverr profile</div><a href="https://www.fiverr.com/zubair714" target="_blank">fiverr.com/zubair714</a></div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>Muhammad Zubair Mirza — Senior Cybersecurity GRC &amp; Resilience Consultant</p>
+    <p>Tampere, Finland · mirza.zubair714@gmail.com</p>
+  </footer>
+
+</div>
+</body>
+</html>
