@@ -1,371 +1,327 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Muhammad Zubair Mirza — Senior Cybersecurity GRC & Resilience Consultant</title>
-<link rel="stylesheet" href="https://unpkg.com/@tabler/icons-webfont@latest/tabler-icons.min.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Muhammad Zubair Mirza — Cybersecurity GRC &amp; Resilience Consultant</title>
+<meta name="description" content="Senior Cybersecurity GRC &amp; Resilience Consultant with 7+ years strengthening cybersecurity, business continuity, and compliance posture across the GCC.">
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
-:root{
-  --bg:#ffffff;--bg-sec:#f7f7f5;--bg-ter:#f0efed;
-  --text:#1a1a1a;--text-sec:#666660;--text-ter:#999993;
-  --border:rgba(0,0,0,0.1);--border-sec:rgba(0,0,0,0.15);
-  --green:#1D9E75;--radius:8px;--radius-lg:12px
-}
-@media(prefers-color-scheme:dark){:root{
-  --bg:#1a1a1a;--bg-sec:#242424;--bg-ter:#2e2e2e;
-  --text:#f0f0ee;--text-sec:#a0a09a;--text-ter:#666660;
-  --border:rgba(255,255,255,0.1);--border-sec:rgba(255,255,255,0.15)
-}}
-body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:var(--text);background:var(--bg);line-height:1.6}
-a{color:inherit;text-decoration:none}
-.site{max-width:900px;margin:0 auto;padding:0 2rem 5rem}
-.nav{display:flex;align-items:center;justify-content:space-between;padding:1.5rem 0;border-bottom:0.5px solid var(--border)}
-.nav-logo{font-size:15px;font-weight:500}
-.nav-links{display:flex;gap:2rem}
-.nav-links a{font-size:13px;color:var(--text-sec);transition:color 0.2s}
-.nav-links a:hover{color:var(--text)}
-.hero{padding:5rem 0 4rem;border-bottom:0.5px solid var(--border)}
-.hero-badge{display:inline-flex;align-items:center;gap:6px;background:var(--bg-sec);border:0.5px solid var(--border);border-radius:999px;padding:4px 12px;font-size:12px;color:var(--text-sec);margin-bottom:2rem}
-.hero-badge span{width:6px;height:6px;border-radius:50%;background:var(--green);flex-shrink:0}
-.hero h1{font-size:42px;font-weight:500;line-height:1.15;margin-bottom:1rem;letter-spacing:-0.02em}
-.hero h1 em{font-style:normal;color:var(--text-sec)}
-.hero-sub{font-size:17px;color:var(--text-sec);line-height:1.7;max-width:580px;margin-bottom:2rem}
-.cert-row{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:2.5rem}
-.cert-pill{font-size:12px;font-weight:500;padding:4px 10px;border-radius:999px;border:0.5px solid var(--border);color:var(--text-sec);background:var(--bg-sec)}
-.hero-cta{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
-.btn-primary{display:inline-flex;align-items:center;gap:6px;background:var(--text);color:var(--bg);border:none;border-radius:var(--radius);padding:10px 20px;font-size:14px;font-weight:500;cursor:pointer;transition:opacity 0.2s}
-.btn-primary:hover{opacity:0.85}
-.btn-secondary{display:inline-flex;align-items:center;gap:6px;background:transparent;color:var(--text);border:0.5px solid var(--border-sec);border-radius:var(--radius);padding:10px 20px;font-size:14px;font-weight:500;cursor:pointer;transition:background 0.2s}
-.btn-secondary:hover{background:var(--bg-sec)}
-.stats-row{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);border:0.5px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;margin:3rem 0}
-.stat{background:var(--bg);padding:1.5rem 1.25rem}
-.stat-num{font-size:28px;font-weight:500;line-height:1;margin-bottom:4px}
-.stat-label{font-size:12px;color:var(--text-sec)}
-.section{padding:4rem 0;border-bottom:0.5px solid var(--border)}
-.section-label{font-size:11px;font-weight:500;text-transform:uppercase;letter-spacing:0.08em;color:var(--text-sec);margin-bottom:1.5rem}
-.section h2{font-size:26px;font-weight:500;margin-bottom:1rem;letter-spacing:-0.01em}
-.section-intro{font-size:15px;color:var(--text-sec);line-height:1.7;max-width:600px;margin-bottom:2.5rem}
-.services-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--border);border:0.5px solid var(--border);border-radius:var(--radius-lg);overflow:hidden}
-.service-card{background:var(--bg);padding:1.5rem;display:flex;flex-direction:column;gap:8px}
-.service-icon{width:32px;height:32px;border-radius:var(--radius);background:var(--bg-sec);display:flex;align-items:center;justify-content:center;margin-bottom:4px}
-.service-icon i{font-size:16px;color:var(--text-sec)}
-.service-card h3{font-size:14px;font-weight:500}
-.service-card p{font-size:13px;color:var(--text-sec);line-height:1.5}
-.clients-list{display:flex;flex-direction:column}
-.client-row{display:flex;align-items:flex-start;gap:1.5rem;padding:1.25rem 0;border-bottom:0.5px solid var(--border)}
-.client-row:last-child{border-bottom:none}
-.client-sector{width:90px;flex-shrink:0;padding-top:2px}
-.sector-badge{font-size:11px;padding:3px 8px;border-radius:999px;background:var(--bg-sec);color:var(--text-sec);border:0.5px solid var(--border);white-space:nowrap;display:inline-block}
-.client-info h4{font-size:14px;font-weight:500;margin-bottom:3px}
-.client-info p{font-size:13px;color:var(--text-sec);line-height:1.5}
-.certs-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
-.cert-card{background:var(--bg-sec);border:0.5px solid var(--border);border-radius:var(--radius-lg);padding:1.25rem}
-.cert-issuer{font-size:11px;color:var(--text-sec);margin-bottom:6px}
-.cert-card h4{font-size:13px;font-weight:500;line-height:1.4}
-.cert-status{font-size:11px;margin-top:8px;color:var(--text-sec)}
-.cert-active{color:var(--green) !important}
-.edu-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px}
-.regions-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
-.region-card{background:var(--bg-sec);border:0.5px solid var(--border);border-radius:var(--radius-lg);padding:1.25rem}
-.region-card h4{font-size:13px;font-weight:500;margin-bottom:10px;display:flex;align-items:center;gap:6px}
-.region-card h4 i{font-size:15px;color:var(--text-sec)}
-.tag-wrap{display:flex;flex-wrap:wrap;gap:6px}
-.tag{font-size:11px;padding:3px 8px;border-radius:999px;background:var(--bg);border:0.5px solid var(--border);color:var(--text-sec)}
-.fiverr-card{background:var(--bg-sec);border:0.5px solid var(--border);border-radius:var(--radius-lg);padding:1.5rem;display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;flex-wrap:wrap;gap:1rem}
-.fiverr-left h4{font-size:14px;font-weight:500;margin-bottom:4px}
-.fiverr-left p{font-size:13px;color:var(--text-sec)}
-.fiverr-stats{display:flex;gap:2rem}
-.fiverr-stat{text-align:center}
-.fiverr-stat .fn{font-size:20px;font-weight:500}
-.fiverr-stat .fl{font-size:11px;color:var(--text-sec)}
-.contact-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px}
-.contact-card{background:var(--bg-sec);border:0.5px solid var(--border);border-radius:var(--radius-lg);padding:1.25rem;display:flex;align-items:center;gap:12px}
-.contact-card i{font-size:18px;color:var(--text-sec);flex-shrink:0}
-.contact-card a{font-size:13px;color:var(--text);word-break:break-all}
-.contact-label{font-size:11px;color:var(--text-sec);margin-bottom:2px}
-footer{padding:2rem 0;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px}
-footer p{font-size:12px;color:var(--text-sec)}
-@media(max-width:600px){
-  .hero h1{font-size:28px}
-  .stats-row{grid-template-columns:repeat(2,1fr)}
-  .services-grid{grid-template-columns:1fr}
-  .certs-grid{grid-template-columns:1fr 1fr}
-  .edu-grid{grid-template-columns:1fr}
-  .regions-grid{grid-template-columns:1fr}
-  .contact-row{grid-template-columns:1fr}
-  .client-row{flex-direction:column;gap:8px}
-  .client-sector{width:auto}
-  .nav-links{display:none}
-}
+  :root { --accent:#22D3EE; --ok:#34D399; --bg:#090D14; --bg-alt:#0C1119; --card:#10161F; --border:#212A38; --border-soft:#182130; --text:#E7ECF3; --text-dim:#8D98AC; --text-faint:#576078; --font:Calibri,Carlito,"Segoe UI",sans-serif; }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin:0; font-family:var(--font); background:var(--bg); color:var(--text);
+    background-image: radial-gradient(rgba(34,211,238,0.05) 1px, transparent 1px); background-size:26px 26px; }
+  a { text-decoration:none; color:inherit; }
+  .mono { font-family:var(--font); }
+  .disp { font-family:var(--font); }
+  .wrap { max-width:1140px; margin:0 auto; padding:64px 32px; }
+  .eyebrow { font-family:var(--font); font-size:12px; font-weight:500; letter-spacing:.06em; text-transform:uppercase; color:var(--accent); }
+  .navlink { font-family:var(--font); color:var(--text-dim); font-size:13px; padding:8px 4px; }
+  .navlink:hover { color:var(--accent); }
+  .btn { background:var(--accent); color:#051018; font-family:var(--font); font-size:13.5px; font-weight:600; padding:12px 22px; border-radius:3px; display:inline-flex; align-items:center; gap:8px; }
+  .btn-o { border:1px solid var(--border); color:var(--text); font-family:var(--font); font-size:13.5px; font-weight:500; padding:12px 22px; border-radius:3px; display:inline-flex; align-items:center; gap:8px; transition:border-color .15s ease; }
+  .btn-o:hover { border-color: rgba(34,211,238,0.4); }
+  .stat { background:var(--card); border:1px solid var(--border); border-radius:6px; padding:20px; }
+  .stat-n { font-family:var(--font); font-weight:700; color:var(--accent); line-height:1; }
+  .stat-l { font-family:var(--font); color:var(--text-faint); margin-top:6px; }
+  .bento { border:1px solid var(--border); border-radius:6px; background:var(--card); padding:22px; transition:border-color .15s ease; }
+  .bento:hover { border-color: rgba(34,211,238,0.35); }
+  .tag { display:inline-flex; align-items:center; padding:5px 11px; border-radius:3px; background:#0C121B; border:1px solid var(--border); color:var(--text-dim); font-family:var(--font); font-size:12px; line-height:1.3; white-space:nowrap; }
+  .sectorlabel { font-family:var(--font); font-size:11.5px; font-weight:500; letter-spacing:.06em; text-transform:uppercase; color:var(--text-faint); }
+  .tl-tile { border:1px solid var(--border); border-radius:6px; background:var(--card); padding:22px; }
+  .dot { width:7px; height:7px; border-radius:50%; background:var(--ok); box-shadow:0 0 0 3px rgba(52,211,153,0.15); animation: pulse 2.4s ease-in-out infinite; }
+  @keyframes pulse { 0%,100%{opacity:1;} 50%{opacity:.45;} }
+  @media (max-width: 760px) {
+    .hide-m { display:none !important; }
+    .stack { flex-direction:column !important; }
+    .hero-h1 { font-size:32px !important; }
+    .sec-pad { padding-left:20px !important; padding-right:20px !important; }
+    .g2 { grid-template-columns:minmax(0,1fr) !important; }
+    .g3 { grid-template-columns:minmax(0,1fr) !important; }
+    .g4 { grid-template-columns:minmax(0,1fr) minmax(0,1fr) !important; }
+    .bento { grid-column: auto !important; grid-row: auto !important; min-width:0; }
+    .tag { white-space: normal !important; overflow-wrap: anywhere; }
+  }
 </style>
 </head>
 <body>
-<div class="site">
 
-  <nav class="nav">
-    <div class="nav-logo">Muhammad Zubair Mirza</div>
-    <div class="nav-links">
-      <a href="#services">Services</a>
-      <a href="#clients">Clients</a>
-      <a href="#credentials">Credentials</a>
-      <a href="#contact">Contact</a>
-    </div>
-  </nav>
+<div style="width:100%; min-height:100vh;">
 
-  <section class="hero">
-    <div class="hero-badge"><span></span>Available for engagements</div>
-    <h1>Senior Cybersecurity GRC<br><em>&amp; Resilience Consultant</em></h1>
-    <p class="hero-sub">9+ years delivering ISO 27001, BCM, NCA ECC, SAMA CSF, and UAE IA engagements for regulated entities across Saudi Arabia, UAE, and the GCC. Finland-based, globally available.</p>
-    <div class="cert-row">
-      <span class="cert-pill">CISM</span>
-      <span class="cert-pill">ISO 27001:2022 Lead Auditor</span>
-      <span class="cert-pill">CCSK</span>
-      <span class="cert-pill">CEH</span>
-      <span class="cert-pill">CC — ISC2</span>
-      <span class="cert-pill">CISSP in progress</span>
-    </div>
-    <div class="hero-cta">
-      <a href="mailto:mirza.zubair714@gmail.com" class="btn-primary">
-        <i class="ti ti-mail"></i>Get in touch
+  <!-- NAV -->
+  <div style="position:sticky; top:0; z-index:20; background:rgba(9,13,20,0.88); backdrop-filter:blur(8px); border-bottom:1px solid var(--border-soft);">
+    <div class="wrap sec-pad" style="padding:14px 32px; display:flex; align-items:center; justify-content:space-between;">
+      <a href="#top" style="display:flex; align-items:center; gap:10px;">
+        <span class="dot"></span>
+        <span class="disp" style="font-weight:600; font-size:16px;">Muhammad Zubair Mirza</span>
       </a>
-      <a href="https://www.fiverr.com/zubair714" target="_blank" class="btn-secondary">
-        <i class="ti ti-external-link"></i>View Fiverr profile
-      </a>
+      <div style="display:flex; gap:24px;" class="hide-m">
+        <a href="#about" class="navlink">about</a>
+        <a href="#expertise" class="navlink">expertise</a>
+        <a href="#engagements" class="navlink">engagements</a>
+        <a href="#experience" class="navlink">experience</a>
+        <a href="#credentials" class="navlink">credentials</a>
+      </div>
+      <a href="https://wa.me/358403283479" target="_blank" rel="noopener" class="btn" style="padding:9px 16px; font-size:12.5px;">get_in_touch()</a>
     </div>
-  </section>
-
-  <div class="stats-row">
-    <div class="stat"><div class="stat-num">9+</div><div class="stat-label">Years of experience</div></div>
-    <div class="stat"><div class="stat-num">18+</div><div class="stat-label">Regulated clients</div></div>
-    <div class="stat"><div class="stat-num">6</div><div class="stat-label">Industry sectors</div></div>
-    <div class="stat"><div class="stat-num">5.0</div><div class="stat-label">Fiverr rating (37 orders)</div></div>
   </div>
 
-  <section class="section" id="services">
-    <div class="section-label">Services</div>
-    <h2>Core competencies</h2>
-    <p class="section-intro">Specialist GRC and resilience consulting across regulatory compliance, business continuity, IT audit, OT security, and AI governance.</p>
-    <div class="services-grid">
-      <div class="service-card">
-        <div class="service-icon"><i class="ti ti-shield-check"></i></div>
-        <h3>GRC &amp; compliance</h3>
-        <p>ISO 27001:2022, NCA ECC, SAMA CSF, UAE IA, ADHICS, GDPR, KSA PDPL, UAE PDPL — gap assessment, implementation, and maturity assessment</p>
+  <!-- HERO -->
+  <div id="top" class="wrap sec-pad" style="padding-top:88px; padding-bottom:64px;">
+    <div class="eyebrow" style="margin-bottom:18px;">// cybersecurity_grc_&amp;_resilience_consultant</div>
+    <div style="display:grid; grid-template-columns: 1.2fr 1fr; gap:48px; align-items:center;" class="g2">
+      <div>
+        <h1 class="disp hero-h1" style="font-size:44px; font-weight:700; line-height:1.14; margin:0 0 20px;">Muhammad Zubair Mirza</h1>
+        <p style="font-size:16.5px; line-height:1.65; color:var(--text-dim); max-width:520px; margin:0 0 30px;">Strengthening the cybersecurity, business continuity, and compliance posture of regulated organizations across the GCC. CISM-certified and ISO 27001:2022 Lead Auditor.</p>
+        <div style="display:flex; gap:12px; flex-wrap:wrap; margin-bottom:26px;">
+          <a href="mailto:mirza.zubair714@gmail.com" class="btn">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 6l-10 7L2 6"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg>
+            email_me
+          </a>
+          <a href="https://linkedin.com/in/muhammad-zubair-mirza" class="btn-o">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            linkedin
+          </a>
+        </div>
+        <div class="mono" style="display:flex; gap:18px; flex-wrap:wrap; font-size:12.5px; color:var(--text-faint);">
+          <span>tampere, finland</span><span>·</span><span>pakistani national</span><span>·</span><span>+358 40 328 3479</span>
+        </div>
       </div>
-      <div class="service-card">
-        <div class="service-icon"><i class="ti ti-refresh-alert"></i></div>
-        <h3>Business continuity</h3>
-        <p>BCM, BCP, DRP, and BIA development aligned to ISO 22301 and SAMA BCMF for regulated financial services and critical infrastructure</p>
-      </div>
-      <div class="service-card">
-        <div class="service-icon"><i class="ti ti-checklist"></i></div>
-        <h3>IT audit</h3>
-        <p>ITGCs, ITACs, data center security controls, application controls, and branchless banking audits for banking and financial services</p>
-      </div>
-      <div class="service-card">
-        <div class="service-icon"><i class="ti ti-circuit-board"></i></div>
-        <h3>OT/ICS security</h3>
-        <p>ISO 62443 assessments and risk management for critical infrastructure including oil and gas, power generation, and utilities</p>
-      </div>
-      <div class="service-card">
-        <div class="service-icon"><i class="ti ti-brain"></i></div>
-        <h3>AI governance</h3>
-        <p>ISO 42001 implementation, NIST AI RMF and EU AI Act assessment and compliance for organisations deploying AI-driven systems</p>
-      </div>
-      <div class="service-card">
-        <div class="service-icon"><i class="ti ti-presentation"></i></div>
-        <h3>IS awareness training</h3>
-        <p>Custom information security awareness programme development, delivery, and effectiveness measurement for regulated organisations</p>
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:14px;" class="g4">
+        <div class="stat"><div class="stat-n" style="font-size:30px;">7+</div><div class="stat-l" style="font-size:11.5px;">years experience</div></div>
+        <div class="stat"><div class="stat-n" style="font-size:30px;">22+</div><div class="stat-l" style="font-size:11.5px;">client engagements</div></div>
+        <div class="stat"><div class="stat-n" style="font-size:30px;">6</div><div class="stat-l" style="font-size:11.5px;">industry sectors</div></div>
+        <div class="stat"><div class="stat-n" style="font-size:30px;">5</div><div class="stat-l" style="font-size:11.5px;">countries delivered in</div></div>
       </div>
     </div>
-  </section>
+  </div>
 
-  <section class="section" id="clients">
-    <div class="section-label">Engagements</div>
-    <h2>Key client engagements</h2>
-    <p class="section-intro">Delivered across banking, energy, defence, healthcare, telecom, and critical infrastructure in Saudi Arabia, UAE, and Pakistan.</p>
-    <div class="clients-list">
-      <div class="client-row">
-        <div class="client-sector"><span class="sector-badge">Energy</span></div>
-        <div class="client-info">
-          <h4>ADNOC &amp; ADNOC Offshore — UAE</h4>
-          <p>Digital Business Continuity Management (DBCM) maturity assessment; OT cybersecurity assessment and risk management aligned to ISO 62443</p>
-        </div>
-      </div>
-      <div class="client-row">
-        <div class="client-sector"><span class="sector-badge">Defence</span></div>
-        <div class="client-info">
-          <h4>TAWAZUN Council — UAE</h4>
-          <p>Defence-sector UAE IA and NIST CSF compliance and maturity assessments</p>
-        </div>
-      </div>
-      <div class="client-row">
-        <div class="client-sector"><span class="sector-badge">Banking</span></div>
-        <div class="client-info">
-          <h4>BUPA Arabia &amp; BSF Capital — KSA</h4>
-          <p>SAMA CSF and SAMA BCMF compliance and maturity assessment; NCA ECC compliance assessment and cybersecurity strategy roadmap</p>
-        </div>
-      </div>
-      <div class="client-row">
-        <div class="client-sector"><span class="sector-badge">Telecom</span></div>
-        <div class="client-info">
-          <h4>GO Telecom — KSA</h4>
-          <p>ISO 27001:2022 and NCA ECC/CCC full audit and implementation</p>
-        </div>
-      </div>
-      <div class="client-row">
-        <div class="client-sector"><span class="sector-badge">Healthcare</span></div>
-        <div class="client-info">
-          <h4>Emirates International Hospital — UAE</h4>
-          <p>ADHICS compliance consultancy</p>
-        </div>
-      </div>
-      <div class="client-row">
-        <div class="client-sector"><span class="sector-badge">Energy</span></div>
-        <div class="client-info">
-          <h4>FAPCO &amp; Emirates Steel Arkan — UAE</h4>
-          <p>DoE CSF assessment, framework development, and cybersecurity roadmap; UAE IA information security audit</p>
-        </div>
-      </div>
-      <div class="client-row">
-        <div class="client-sector"><span class="sector-badge">Banking</span></div>
-        <div class="client-info">
-          <h4>GO Money, Wall Street Exchange, Introspect Capital</h4>
-          <p>SAMA CSF and BCM framework development; ISMS audit and implementation; ISMS framework development</p>
-        </div>
-      </div>
-      <div class="client-row">
-        <div class="client-sector"><span class="sector-badge">Additional</span></div>
-        <div class="client-info">
-          <h4>Further GCC engagements</h4>
-          <p>MIPCO, SCIPCO, TradEx, SINYAR Holding, EdenRed, TAKWEEN AI — full details available on request</p>
-        </div>
+  <!-- ABOUT -->
+  <div id="about" style="border-top:1px solid var(--border-soft);">
+    <div class="wrap sec-pad">
+      <div class="eyebrow" style="margin-bottom:10px;">// profile</div>
+      <h2 class="disp" style="font-size:24px; font-weight:600; margin:0 0 22px;">About</h2>
+      <div class="bento">
+        <p style="font-size:15.5px; line-height:1.85; color:var(--text-dim); margin:0; max-width:820px;">Senior Cybersecurity GRC &amp; Resilience Consultant with 7+ years strengthening the cybersecurity, business continuity, and compliance posture of 18+ regulated organizations across the GCC. CISM-certified and ISO 27001:2022 Lead Auditor, specializing in ISO 27001, ISO 22301/SAMA BCMF business continuity, ISO 42001 AI governance, and ISO 62443 OT security. Proven ability to translate SAMA, NCA, UAE IA, DoE CSF, Dubai ISR, and ADHICS regulatory requirements into measurable risk reduction and audit-ready compliance for banking, energy, defense, and healthcare clients.</p>
       </div>
     </div>
-  </section>
+  </div>
 
-  <section class="section" id="credentials">
-    <div class="section-label">Credentials</div>
-    <h2>Certifications &amp; education</h2>
-    <p class="section-intro">Professional certifications from globally recognised bodies in cybersecurity, audit, and cloud security.</p>
-    <div class="certs-grid">
-      <div class="cert-card">
-        <div class="cert-issuer">ISACA</div>
-        <h4>Certified Information Security Manager (CISM)</h4>
-        <div class="cert-status cert-active">Active</div>
-      </div>
-      <div class="cert-card">
-        <div class="cert-issuer">IRCA</div>
-        <h4>ISO 27001:2022 Lead Auditor</h4>
-        <div class="cert-status cert-active">Active</div>
-      </div>
-      <div class="cert-card">
-        <div class="cert-issuer">Cloud Security Alliance</div>
-        <h4>Certificate of Cloud Security Knowledge (CCSK)</h4>
-        <div class="cert-status cert-active">Active</div>
-      </div>
-      <div class="cert-card">
-        <div class="cert-issuer">EC-Council</div>
-        <h4>Certified Ethical Hacker (CEH)</h4>
-        <div class="cert-status cert-active">Active</div>
-      </div>
-      <div class="cert-card">
-        <div class="cert-issuer">ISC2</div>
-        <h4>Certified in Cybersecurity (CC)</h4>
-        <div class="cert-status cert-active">Active</div>
-      </div>
-      <div class="cert-card">
-        <div class="cert-issuer">ISC2</div>
-        <h4>CISSP — Certified Information Systems Security Professional</h4>
-        <div class="cert-status">In progress — targeting 2026</div>
-      </div>
-    </div>
-    <div class="edu-grid">
-      <div class="cert-card">
-        <div class="cert-issuer">Tampere University, Finland</div>
-        <h4>MSc Information Technology — Information Security</h4>
-        <div class="cert-status cert-active">Graduated December 2025</div>
-      </div>
-      <div class="cert-card">
-        <div class="cert-issuer">Riphah International University, Islamabad</div>
-        <h4>MS Information Security</h4>
-        <div class="cert-status cert-active">Graduated 2019</div>
-      </div>
-    </div>
-  </section>
+  <!-- EXPERTISE -->
+  <div id="expertise" style="border-top:1px solid var(--border-soft); background:var(--bg-alt);">
+    <div class="wrap sec-pad">
+      <div class="eyebrow" style="margin-bottom:10px;">// capabilities</div>
+      <h2 class="disp" style="font-size:24px; font-weight:600; margin:0 0 26px;">Core Expertise</h2>
+      <div style="display:grid; grid-template-columns: 1.3fr 1fr; gap:16px;" class="g2">
 
-  <section class="section">
-    <div class="section-label">Regional expertise</div>
-    <h2>Frameworks by geography</h2>
-    <p class="section-intro">Deep knowledge of GCC regulatory frameworks alongside EU, UK, and international standards.</p>
-    <div class="regions-grid">
-      <div class="region-card">
-        <h4><i class="ti ti-flag"></i>Saudi Arabia</h4>
-        <div class="tag-wrap">
-          <span class="tag">NCA ECC</span><span class="tag">NCA CCC</span><span class="tag">NCA OTCC</span><span class="tag">SAMA CSF</span><span class="tag">SAMA BCMF</span><span class="tag">KSA PDPL</span><span class="tag">Vision 2030</span>
+        <div class="bento" style="grid-row: span 2;">
+          <div class="disp" style="font-weight:600; font-size:15px; margin-bottom:14px;">GCC Regulatory Frameworks</div>
+          <div style="display:flex; flex-wrap:wrap; gap:8px;">
+            <span class="tag">sama_csf</span><span class="tag">sama_bcmf</span><span class="tag">nca_ecc</span><span class="tag">nca_ccc</span><span class="tag">nca_otcc</span><span class="tag">ndmo</span><span class="tag">uae_ia</span><span class="tag">adhics</span><span class="tag">dubai_isr</span><span class="tag">ksa_pdpl</span><span class="tag">uae_pdpl</span><span class="tag">qatar_nia/qcb</span>
+          </div>
         </div>
-      </div>
-      <div class="region-card">
-        <h4><i class="ti ti-flag"></i>UAE</h4>
-        <div class="tag-wrap">
-          <span class="tag">UAE IA</span><span class="tag">ADHICS</span><span class="tag">Dubai ISR</span><span class="tag">UAE PDPL</span><span class="tag">NESA</span>
-        </div>
-      </div>
-      <div class="region-card">
-        <h4><i class="ti ti-flag"></i>EU &amp; international</h4>
-        <div class="tag-wrap">
-          <span class="tag">GDPR</span><span class="tag">DORA</span><span class="tag">NIS2</span><span class="tag">EU AI Act</span><span class="tag">ISO 27001</span><span class="tag">ISO 22301</span><span class="tag">ISO 42001</span><span class="tag">NIST CSF</span><span class="tag">NIST AI RMF</span>
-        </div>
-      </div>
-      <div class="region-card">
-        <h4><i class="ti ti-flag"></i>UK</h4>
-        <div class="tag-wrap">
-          <span class="tag">Cyber Essentials</span><span class="tag">Cyber Essentials Plus</span><span class="tag">NCSC CAF</span><span class="tag">UK GDPR</span><span class="tag">Data Protection Act 2018</span>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <section class="section" id="contact">
-    <div class="section-label">Fiverr &amp; freelance</div>
-    <h2>Hire me</h2>
-    <p class="section-intro">Available for independent engagements through Fiverr or direct contact. Serving EU, UK, GCC, and international clients since 2021.</p>
-    <div class="fiverr-card">
-      <div class="fiverr-left">
-        <h4>@zubair714 on Fiverr</h4>
-        <p>Level 2 seller — BCM/BCP/DRP, NCA ECC, IT audit, ISO 27001 policies, ISMS audit, IS awareness training</p>
-      </div>
-      <div class="fiverr-stats">
-        <div class="fiverr-stat"><div class="fn">5.0</div><div class="fl">Rating</div></div>
-        <div class="fiverr-stat"><div class="fn">37</div><div class="fl">Orders</div></div>
-        <div class="fiverr-stat"><div class="fn">L2</div><div class="fl">Level</div></div>
-      </div>
-    </div>
-    <div class="contact-row">
-      <div class="contact-card">
-        <i class="ti ti-mail"></i>
-        <div><div class="contact-label">Email</div><a href="mailto:mirza.zubair714@gmail.com">mirza.zubair714@gmail.com</a></div>
-      </div>
-      <div class="contact-card">
-        <i class="ti ti-brand-linkedin"></i>
-        <div><div class="contact-label">LinkedIn</div><a href="https://www.linkedin.com/in/muhammadzubair-mirza-73a366119" target="_blank">Muhammad Zubair Mirza</a></div>
-      </div>
-      <div class="contact-card">
-        <i class="ti ti-map-pin"></i>
-        <div><div class="contact-label">Location</div><a>Tampere, Finland — available globally</a></div>
-      </div>
-      <div class="contact-card">
-        <i class="ti ti-external-link"></i>
-        <div><div class="contact-label">Fiverr profile</div><a href="https://www.fiverr.com/zubair714" target="_blank">fiverr.com/zubair714</a></div>
-      </div>
-    </div>
-  </section>
+        <div class="bento">
+          <div class="disp" style="font-weight:600; font-size:14px; margin-bottom:12px;">Business Continuity &amp; Resilience</div>
+          <div style="display:flex; flex-wrap:wrap; gap:8px;">
+            <span class="tag">iso_22301_bcms</span><span class="tag">sama_bcmf</span><span class="tag">dbcm</span><span class="tag">bia</span><span class="tag">bcp/drp</span>
+          </div>
+        </div>
 
-  <footer>
-    <p>Muhammad Zubair Mirza — Senior Cybersecurity GRC &amp; Resilience Consultant</p>
-    <p>Tampere, Finland · mirza.zubair714@gmail.com</p>
-  </footer>
+        <div class="bento">
+          <div class="disp" style="font-weight:600; font-size:14px; margin-bottom:12px;">International Standards</div>
+          <div style="display:flex; flex-wrap:wrap; gap:8px;">
+            <span class="tag">iso_27001:2022</span><span class="tag">iso_22301</span><span class="tag">iso_42001</span><span class="tag">iso_62443</span><span class="tag">iso_27005</span><span class="tag">nist_csf</span><span class="tag">nist_rmf</span><span class="tag">nist_ai_rmf</span><span class="tag">eu_ai_act</span><span class="tag">dora</span><span class="tag">nis2</span><span class="tag">gdpr</span>
+          </div>
+        </div>
+
+        <div class="bento" style="grid-column: span 2;">
+          <div class="disp" style="font-weight:600; font-size:14px; margin-bottom:12px;">Emerging Specializations</div>
+          <div style="display:flex; flex-wrap:wrap; gap:8px;">
+            <span class="tag">ai_governance_(iso_42001/nist_ai_rmf/eu_ai_act/csa_aicm)</span><span class="tag">agentic_ai</span><span class="tag">cloud_security_(csa_ccm)</span><span class="tag">operational_resilience_(dora/nis2)</span>
+          </div>
+        </div>
+
+        <div class="bento">
+          <div class="disp" style="font-weight:600; font-size:14px; margin-bottom:12px;">GRC &amp; Audit Domains</div>
+          <div style="display:flex; flex-wrap:wrap; gap:8px;">
+            <span class="tag">compliance_auditing</span><span class="tag">it_&amp;_security_audit</span><span class="tag">bcms/bcp/drp</span><span class="tag">ot_ics_assessment</span><span class="tag">app_security</span><span class="tag">cloud_security</span><span class="tag">data_privacy</span><span class="tag">is_awareness_training</span>
+          </div>
+        </div>
+
+        <div class="bento">
+          <div class="disp" style="font-weight:600; font-size:14px; margin-bottom:12px;">Security Tools &amp; Platforms</div>
+          <div style="display:flex; flex-wrap:wrap; gap:8px;">
+            <span class="tag">tenable_nessus</span><span class="tag">openvas</span><span class="tag">nmap</span><span class="tag">eramba_grc</span><span class="tag">owasp_zap</span><span class="tag">ms_purview</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ENGAGEMENTS -->
+  <div id="engagements" style="border-top:1px solid var(--border-soft);">
+    <div class="wrap sec-pad">
+      <div class="eyebrow" style="margin-bottom:10px;">// track_record</div>
+      <h2 class="disp" style="font-size:24px; font-weight:600; margin:0 0 20px;">Key Client Engagements</h2>
+
+      <div style="display:grid; grid-template-columns: repeat(3, 1fr); gap:14px; margin-bottom:38px;" class="g3">
+        <div class="stat"><div class="stat-n" style="font-size:26px;">22+</div><div class="stat-l" style="font-size:11px;">engagements</div></div>
+        <div class="stat"><div class="stat-n" style="font-size:26px;">6</div><div class="stat-l" style="font-size:11px;">sectors</div></div>
+        <div class="stat"><div class="stat-n" style="font-size:26px;">5</div><div class="stat-l" style="font-size:11px;">countries</div></div>
+      </div>
+
+      <div class="sectorlabel" style="margin-bottom:14px;">[ banking &amp; financial services ]</div>
+      <div style="display:grid; grid-template-columns: 1fr 1fr; gap:14px; margin-bottom:32px;" class="g2">
+        <div class="bento"><div class="disp" style="font-weight:600; font-size:14px; margin-bottom:4px;">BUPA Arabia (KSA)</div><div style="font-size:13px; color:var(--text-dim); line-height:1.5;">SAMA CSF &amp; BCMF maturity assessment; Insurance Authority framework assessment</div></div>
+        <div class="bento"><div class="disp" style="font-weight:600; font-size:14px; margin-bottom:4px;">Kuwait Finance House (KFH)</div><div style="font-size:13px; color:var(--text-dim); line-height:1.5;">ISO 42001 AI Management System framework development</div></div>
+        <div class="bento"><div class="disp" style="font-weight:600; font-size:14px; margin-bottom:4px;">Banque Saudi Fransi Capital (KSA)</div><div style="font-size:13px; color:var(--text-dim); line-height:1.5;">NCA ECC assessment; cybersecurity strategy &amp; roadmap</div></div>
+        <div class="bento"><div class="disp" style="font-weight:600; font-size:14px; margin-bottom:4px;">GO Money (KSA)</div><div style="font-size:13px; color:var(--text-dim); line-height:1.5;">SAMA CSF end-to-end BCM framework development</div></div>
+        <div class="bento"><div class="disp" style="font-weight:600; font-size:14px; margin-bottom:4px;">Wall Street Exchange Center (Dubai)</div><div style="font-size:13px; color:var(--text-dim); line-height:1.5;">ISO 27001:2022 framework development &amp; internal audit</div></div>
+        <div class="bento"><div class="disp" style="font-weight:600; font-size:14px; margin-bottom:4px;">Introspect Capital (UAE)</div><div style="font-size:13px; color:var(--text-dim); line-height:1.5;">ISO 27001:2022 implementation support &amp; internal audit</div></div>
+      </div>
+
+      <div class="sectorlabel" style="margin-bottom:14px;">[ energy, utilities &amp; critical infrastructure ]</div>
+      <div style="display:grid; grid-template-columns: 1fr 1fr; gap:14px; margin-bottom:32px;" class="g2">
+        <div class="bento"><div class="disp" style="font-weight:600; font-size:14px; margin-bottom:4px;">ADNOC (UAE)</div><div style="font-size:13px; color:var(--text-dim); line-height:1.5;">Digital Business Continuity Management (DBCM) maturity assessment</div></div>
+        <div class="bento"><div class="disp" style="font-weight:600; font-size:14px; margin-bottom:4px;">ADNOC Offshore (UAE)</div><div style="font-size:13px; color:var(--text-dim); line-height:1.5;">OT cybersecurity assessment &amp; risk management (ISO 62443)</div></div>
+        <div class="bento"><div class="disp" style="font-weight:600; font-size:14px; margin-bottom:4px;">Dubai Cables (DUCAB)</div><div style="font-size:13px; color:var(--text-dim); line-height:1.5;">NIST CSF 2.0 cybersecurity assessment</div></div>
+        <div class="bento"><div class="disp" style="font-weight:600; font-size:14px; margin-bottom:4px;">Emirates Steel Arkan (UAE)</div><div style="font-size:13px; color:var(--text-dim); line-height:1.5;">Information security audit aligned to UAE IA</div></div>
+        <div class="bento" style="grid-column: span 2;"><div class="disp" style="font-weight:600; font-size:14px; margin-bottom:4px;">Fujairah Asia Power Company (FAPCO)</div><div style="font-size:13px; color:var(--text-dim); line-height:1.5;">DoE CSF assessment, security framework development &amp; cybersecurity roadmap</div></div>
+      </div>
+
+      <div class="sectorlabel" style="margin-bottom:14px;">[ defense &amp; government · healthcare · telecom · international ]</div>
+      <div style="display:grid; grid-template-columns: 1fr 1fr; gap:14px; margin-bottom:18px;" class="g2">
+        <div class="bento"><div class="disp" style="font-weight:600; font-size:14px; margin-bottom:4px;">TAWAZUN Council (UAE)</div><div style="font-size:13px; color:var(--text-dim); line-height:1.5;">Defense-sector UAE IA &amp; NIST CSF compliance assessments</div></div>
+        <div class="bento"><div class="disp" style="font-weight:600; font-size:14px; margin-bottom:4px;">Emirates International Hospital (UAE)</div><div style="font-size:13px; color:var(--text-dim); line-height:1.5;">ADHICS compliance consultancy</div></div>
+        <div class="bento"><div class="disp" style="font-weight:600; font-size:14px; margin-bottom:4px;">GO Telecom (KSA)</div><div style="font-size:13px; color:var(--text-dim); line-height:1.5;">ISO 27001:2022 &amp; NCA ECC/CCC security assessment</div></div>
+        <div class="bento"><div class="disp" style="font-weight:600; font-size:14px; margin-bottom:4px;">ACX International (Armenia)</div><div style="font-size:13px; color:var(--text-dim); line-height:1.5;">ISO 27001:2022 internal audit</div></div>
+      </div>
+
+      <p class="mono" style="font-size:12px; color:var(--text-faint); margin:4px 0 0;">// plus 12+ additional regulated organizations across insurance, trade finance &amp; telecom — full list available on request</p>
+    </div>
+  </div>
+
+  <!-- EXPERIENCE -->
+  <div id="experience" style="border-top:1px solid var(--border-soft); background:var(--bg-alt);">
+    <div class="wrap sec-pad">
+      <div class="eyebrow" style="margin-bottom:10px;">// career</div>
+      <h2 class="disp" style="font-size:24px; font-weight:600; margin:0 0 24px;">Professional Experience</h2>
+
+      <div style="display:flex; flex-direction:column; gap:14px;">
+        <div class="tl-tile" style="border-color: rgba(34,211,238,0.35);">
+          <div style="display:flex; justify-content:space-between; align-items:baseline; gap:12px; flex-wrap:wrap; margin-bottom:8px;">
+            <div class="disp" style="font-weight:600; font-size:15.5px;">Cybersecurity GRC &amp; Resilience Consultant — DTS Solution</div>
+            <div class="mono" style="font-size:12px; color:var(--accent); white-space:nowrap;">oct_2022 – present · dubai, uae (hybrid)</div>
+          </div>
+          <p style="font-size:14px; line-height:1.7; color:var(--text-dim); margin:0; max-width:760px;">Lead compliance, risk, and business continuity engagements for GCC-regulated banking, energy, defense, and healthcare clients — ISO 27001/22301/42001 implementation, NCA ECC and SAMA CSF/BCMF assessments, OT security for oil &amp; gas operators, DoE CSF assessments for energy clients, ADHICS assessments for healthcare, and AI governance under NIST AI RMF and the EU AI Act.</p>
+        </div>
+
+        <div class="tl-tile">
+          <div style="display:flex; justify-content:space-between; align-items:baseline; gap:12px; flex-wrap:wrap; margin-bottom:8px;">
+            <div class="disp" style="font-weight:600; font-size:14.5px;">Assistant Manager, Risk Management — Ufone Limited (PTCL Group)</div>
+            <div class="mono" style="font-size:11.5px; color:var(--text-faint); white-space:nowrap;">feb_2022 – oct_2022 · islamabad, pakistan</div>
+          </div>
+          <p style="font-size:13.5px; line-height:1.65; color:var(--text-dim); margin:0; max-width:760px;">IS risk management under the Etisalat Group Cybersecurity Framework (EGCSF); IT audits, compliance gap analysis, and cross-functional remediation.</p>
+        </div>
+
+        <div class="tl-tile">
+          <div style="display:flex; justify-content:space-between; align-items:baseline; gap:12px; flex-wrap:wrap; margin-bottom:8px;">
+            <div class="disp" style="font-weight:600; font-size:14.5px;">ISMS Specialist — Inbox Business Technologies Limited</div>
+            <div class="mono" style="font-size:11.5px; color:var(--text-faint); white-space:nowrap;">apr_2020 – feb_2022 · islamabad, pakistan</div>
+          </div>
+          <p style="font-size:13.5px; line-height:1.65; color:var(--text-dim); margin:0; max-width:760px;">Built a full ISO 27001 ISMS and NIST CSF-aligned security program from the ground up, including risk assessments, vulnerability assessments, internal audits, and awareness training.</p>
+        </div>
+
+        <div class="tl-tile">
+          <div style="display:flex; justify-content:space-between; align-items:baseline; gap:12px; flex-wrap:wrap; margin-bottom:8px;">
+            <div class="disp" style="font-weight:600; font-size:14.5px;">IS/IT Auditor (Officer Grade-I) — Askari Bank Limited</div>
+            <div class="mono" style="font-size:11.5px; color:var(--text-faint); white-space:nowrap;">oct_2019 – apr_2020 · islamabad, pakistan</div>
+          </div>
+          <p style="font-size:13.5px; line-height:1.65; color:var(--text-dim); margin:0; max-width:760px;">Audited banking applications, ITGCs, and internet/mobile banking platforms against ISO 27001 and internal control frameworks.</p>
+        </div>
+
+        <div class="tl-tile">
+          <div style="display:flex; justify-content:space-between; align-items:baseline; gap:12px; flex-wrap:wrap; margin-bottom:8px;">
+            <div class="disp" style="font-weight:600; font-size:14.5px;">Senior Consultant, Technology Risk &amp; Cybersecurity — Ernst &amp; Young (EY)</div>
+            <div class="mono" style="font-size:11.5px; color:var(--text-faint); white-space:nowrap;">jan_2019 – sep_2019 · islamabad, pakistan</div>
+          </div>
+          <p style="font-size:13.5px; line-height:1.65; color:var(--text-dim); margin:0; max-width:760px;">Reviewed ITGCs and server-level controls; conducted BIA and BCP/DRP audits and ISO 27001-aligned risk assessments across multiple industries.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CREDENTIALS -->
+  <div id="credentials" style="border-top:1px solid var(--border-soft);">
+    <div class="wrap sec-pad">
+      <div class="eyebrow" style="margin-bottom:10px;">// credentials</div>
+      <h2 class="disp" style="font-size:24px; font-weight:600; margin:0 0 22px;">Certifications &amp; Education</h2>
+
+      <div style="display:grid; grid-template-columns: repeat(4, 1fr); gap:14px; margin-bottom:32px;" class="g4">
+        <div class="stat"><div class="stat-n" style="font-size:26px;">5</div><div class="stat-l" style="font-size:11px;">certifications</div></div>
+        <div class="stat"><div class="stat-n" style="font-size:26px;">1</div><div class="stat-l" style="font-size:11px;">in progress (CISSP)</div></div>
+        <div class="stat"><div class="stat-n" style="font-size:26px;">3</div><div class="stat-l" style="font-size:11px;">degrees</div></div>
+        <div class="stat"><div class="stat-n" style="font-size:26px;">2</div><div class="stat-l" style="font-size:11px;">countries studied in</div></div>
+      </div>
+
+      <div style="display:grid; grid-template-columns: 1fr 1fr; gap:16px;" class="g2">
+        <div class="bento">
+          <div class="sectorlabel" style="margin-bottom:14px;">[ certifications ]</div>
+          <div style="display:flex; flex-direction:column; gap:2px;">
+            <div style="display:flex; justify-content:space-between; gap:12px; padding:11px 0; border-bottom:1px solid var(--border-soft);"><span class="mono" style="font-weight:600; font-size:13px;">CISM</span><span style="font-size:12.5px; color:var(--text-dim);">Certified Information Security Manager, ISACA</span></div>
+            <div style="display:flex; justify-content:space-between; gap:12px; padding:11px 0; border-bottom:1px solid var(--border-soft);"><span class="mono" style="font-weight:600; font-size:13px;">ISO 27001:2022 LA</span><span style="font-size:12.5px; color:var(--text-dim);">Lead Auditor, IRCA</span></div>
+            <div style="display:flex; justify-content:space-between; gap:12px; padding:11px 0; border-bottom:1px solid var(--border-soft);"><span class="mono" style="font-weight:600; font-size:13px;">CCSK</span><span style="font-size:12.5px; color:var(--text-dim);">Cloud Security Knowledge, CSA</span></div>
+            <div style="display:flex; justify-content:space-between; gap:12px; padding:11px 0; border-bottom:1px solid var(--border-soft);"><span class="mono" style="font-weight:600; font-size:13px;">CEH</span><span style="font-size:12.5px; color:var(--text-dim);">Certified Ethical Hacker, EC-Council</span></div>
+            <div style="display:flex; justify-content:space-between; gap:12px; padding:11px 0; border-bottom:1px solid var(--border-soft);"><span class="mono" style="font-weight:600; font-size:13px;">CC</span><span style="font-size:12.5px; color:var(--text-dim);">Certified in Cybersecurity, ISC2</span></div>
+            <div style="display:flex; justify-content:space-between; gap:12px; padding:11px 0;"><span class="mono" style="font-weight:600; font-size:13px; color:var(--text-faint);">CISSP</span><span style="font-size:12.5px; color:var(--text-faint);">in_progress — targeting 2026</span></div>
+          </div>
+        </div>
+        <div class="bento">
+          <div class="sectorlabel" style="margin-bottom:14px;">[ education ]</div>
+          <div style="display:flex; flex-direction:column; gap:2px;">
+            <div style="padding:11px 0; border-bottom:1px solid var(--border-soft);">
+              <div style="font-weight:600; font-size:13.5px;">MSc Information Technology (Information Security)</div>
+              <div class="mono" style="font-size:11.5px; color:var(--text-faint); margin-top:3px;">tampere university, finland · 2023–2025</div>
+            </div>
+            <div style="padding:11px 0; border-bottom:1px solid var(--border-soft);">
+              <div style="font-weight:600; font-size:13.5px;">MS Information Security</div>
+              <div class="mono" style="font-size:11.5px; color:var(--text-faint); margin-top:3px;">riphah international university, islamabad · 2016–2019</div>
+            </div>
+            <div style="padding:11px 0;">
+              <div style="font-weight:600; font-size:13.5px;">BS Computer Science</div>
+              <div class="mono" style="font-size:11.5px; color:var(--text-faint); margin-top:3px;">allama iqbal open university, islamabad · 2010–2014</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CONTACT / FOOTER -->
+  <div id="contact" style="border-top:1px solid var(--border-soft); background:#05070C;">
+    <div class="wrap sec-pad" style="padding-top:76px; padding-bottom:76px;">
+      <div class="eyebrow" style="margin-bottom:16px;">// contact</div>
+      <h2 class="disp" style="font-size:28px; font-weight:700; margin:0 0 16px; max-width:560px;">Let's talk about your compliance and resilience program.</h2>
+      <p style="font-size:15.5px; line-height:1.6; color:var(--text-dim); max-width:560px; margin:0 0 32px;">Open to senior GRC, compliance, and cybersecurity resilience roles across the GCC.</p>
+      <div style="display:flex; gap:32px; flex-wrap:wrap;" class="stack mono">
+        <a href="mailto:mirza.zubair714@gmail.com" style="display:flex; align-items:center; gap:10px; font-size:13.5px;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#22D3EE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 6l-10 7L2 6"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg>
+          mirza.zubair714@gmail.com
+        </a>
+        <a href="tel:+358403283479" style="display:flex; align-items:center; gap:10px; font-size:13.5px;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#22D3EE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.12.9.35 1.79.68 2.63a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.45-1.45a2 2 0 012.11-.45c.84.33 1.73.56 2.63.68A2 2 0 0122 16.92z"/></svg>
+          +358 40 328 3479
+        </a>
+        <a href="https://linkedin.com/in/muhammad-zubair-mirza" style="display:flex; align-items:center; gap:10px; font-size:13.5px;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#22D3EE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          linkedin.com/in/muhammad-zubair-mirza
+        </a>
+      </div>
+      <div class="mono" style="margin-top:48px; padding-top:24px; border-top:1px solid var(--border-soft); font-size:11.5px; color:var(--text-faint);">© muhammad_zubair_mirza · tampere, finland</div>
+    </div>
+  </div>
 
 </div>
 </body>
