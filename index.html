@@ -5,14 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Muhammad Zubair Mirza — Senior Cybersecurity GRC &amp; Resilience Consultant</title>
 <meta name="description" content="Senior Cybersecurity GRC &amp; Resilience Consultant with 7+ years strengthening cybersecurity, business continuity, and compliance posture across the GCC.">
-<meta name="color-scheme" content="dark">
+<meta name="color-scheme" content="light">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg:#0A0E14; --surface:#101722; --surface-2:#151E2C; --line:#222E40;
-  --text:#E8EDF4; --muted:#A3B0C2; --accent:#22D3EE; --accent-ink:#04141A;
+  --bg:#F7F9FC; --surface:#FFFFFF; --surface-2:#F0F4FA; --line:#D6DFEC; --body2:#2E3D54;
+  --text:#0F1B2D; --muted:#4A5A72; --accent:#1E3A8A; --accent-ink:#FFFFFF; --accent-hi:#2B4FB8;
   --font-display:"Space Grotesk",system-ui,sans-serif;
   --font-body:"Source Sans 3",system-ui,-apple-system,"Segoe UI",sans-serif;
   --s1:8px; --s2:16px; --s3:24px; --s4:32px; --s6:48px; --s8:64px; --s12:96px;
@@ -25,7 +25,7 @@ h1,h2,h3,h4{font-family:var(--font-display);line-height:1.15;margin:0;letter-spa
 p{margin:0}
 ul{margin:0;padding:0;list-style:none}
 a{color:var(--accent);text-underline-offset:3px}
-a:hover{color:#67E8F9}
+a:hover{color:var(--accent-hi)}
 :focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:4px}
 .wrap{max-width:var(--max);margin:0 auto;padding:0 var(--s3)}
 .skip{position:absolute;left:var(--s2);top:-100px;background:var(--accent);color:var(--accent-ink);padding:var(--s1) var(--s2);border-radius:6px;z-index:100;font-weight:600}
@@ -34,13 +34,13 @@ a:hover{color:#67E8F9}
 /* buttons */
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:var(--s1);min-height:48px;padding:0 var(--s3);border-radius:8px;font:600 1rem/1 var(--font-body);text-decoration:none;border:1.5px solid transparent;cursor:pointer;transition:background-color var(--t),border-color var(--t),transform var(--t),color var(--t)}
 .btn-primary{background:var(--accent);color:var(--accent-ink)}
-.btn-primary:hover{background:#67E8F9;color:var(--accent-ink);transform:translateY(-1px)}
+.btn-primary:hover{background:var(--accent-hi);color:var(--accent-ink);transform:translateY(-1px)}
 .btn-ghost{background:transparent;color:var(--text);border-color:var(--line)}
 .btn-ghost:hover{border-color:var(--accent);color:var(--accent)}
 .btn-sm{min-height:44px;padding:0 var(--s2);font-size:.9375rem}
 
 /* nav */
-.nav{position:sticky;top:0;z-index:50;background:rgba(10,14,20,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav{position:sticky;top:0;z-index:50;background:rgba(247,249,252,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
 .nav-in{height:var(--nav-h);display:flex;align-items:center;justify-content:space-between;gap:var(--s2)}
 .brand{font:600 1.0625rem var(--font-display);color:var(--text);text-decoration:none;white-space:nowrap}
 .brand:hover{color:var(--accent)}
@@ -88,7 +88,7 @@ h2{font-size:clamp(1.875rem,4vw,2.75rem);margin-bottom:var(--s6);max-width:20ch}
 @media (max-width:599px){.bars li{grid-template-columns:minmax(0,1fr) 2ch}.bars .lbl{grid-column:1/-1}}
 
 /* about */
-.about p{font-size:1.1875rem;max-width:68ch;color:#CBD5E1}
+.about p{font-size:1.1875rem;max-width:68ch;color:var(--body2)}
 
 /* expertise */
 .grid{display:grid;gap:var(--s3);grid-template-columns:repeat(3,1fr)}
@@ -106,7 +106,7 @@ h2{font-size:clamp(1.875rem,4vw,2.75rem);margin-bottom:var(--s6);max-width:20ch}
 .eng:last-child{border-bottom:0}
 .eng .who{font-weight:600}
 .eng .who span{display:block;font-weight:400;color:var(--muted);font-size:.9375rem}
-.eng .what{color:#CBD5E1}
+.eng .what{color:var(--body2)}
 .note{margin-top:var(--s6);color:var(--muted);font-size:1rem}
 
 /* timeline */
@@ -117,7 +117,7 @@ h2{font-size:clamp(1.875rem,4vw,2.75rem);margin-bottom:var(--s6);max-width:20ch}
 .job time{display:block;color:var(--accent);font-weight:600;font-size:.9375rem}
 .job h3{font-size:1.375rem;margin:4px 0}
 .job .org{color:var(--muted);margin-bottom:var(--s1)}
-.job p:last-child{max-width:68ch;color:#CBD5E1}
+.bul{list-style:disc;padding-left:1.25em;max-width:72ch;color:var(--body2)}.bul li{margin-top:var(--s1)}.bul li::marker{color:var(--accent)}
 
 /* creds */
 .two{display:grid;grid-template-columns:1fr 1fr;gap:var(--s4)}
@@ -221,11 +221,11 @@ footer{border-top:1px solid var(--line);padding:var(--s4) 0;color:var(--muted);f
     <div class="dash">
       <article class="card rv">
         <h3>Named engagements by sector</h3>
-        <p class="cap">Engagements listed below; 12+ more not itemised.</p>
+        <p class="cap">Engagements itemised below; others on request.</p>
         <ul class="bars">
-          <li><span class="lbl">Banking &amp; financial services</span><span class="track"><span class="bar" style="--w:100%"></span></span><span class="val">6</span></li>
-          <li><span class="lbl">Energy, utilities &amp; infrastructure</span><span class="track"><span class="bar" style="--w:83.3%"></span></span><span class="val">5</span></li>
-          <li><span class="lbl">Defense, healthcare, telecom &amp; intl.</span><span class="track"><span class="bar" style="--w:66.7%"></span></span><span class="val">4</span></li>
+          <li><span class="lbl">Banking &amp; financial services</span><span class="track"><span class="bar" style="--w:100%"></span></span><span class="val">7</span></li>
+          <li><span class="lbl">Energy, utilities &amp; infrastructure</span><span class="track"><span class="bar" style="--w:71.4%"></span></span><span class="val">5</span></li>
+          <li><span class="lbl">Defense, healthcare, telecom &amp; intl.</span><span class="track"><span class="bar" style="--w:57.1%"></span></span><span class="val">4</span></li>
         </ul>
       </article>
       <article class="card rv">
@@ -269,11 +269,12 @@ footer{border-top:1px solid var(--line);padding:var(--s4) 0;color:var(--muted);f
     <h2>Frameworks, standards and tools.</h2>
     <div class="grid">
       <article class="card rv"><h3>GCC Regulatory Frameworks</h3><ul class="tags"><li>SAMA CSF</li><li>SAMA BCMF</li><li>NCA ECC</li><li>NCA CCC</li><li>NCA OTCC</li><li>NDMO</li><li>UAE IA</li><li>ADHICS</li><li>Dubai ISR</li><li>KSA PDPL</li><li>UAE PDPL</li><li>Qatar NIA/QCB</li></ul></article>
-      <article class="card rv"><h3>Business Continuity &amp; Resilience</h3><ul class="tags"><li>ISO 22301 BCMS</li><li>SAMA BCMF</li><li>DBCM</li><li>BIA</li><li>BCP/DRP</li></ul></article>
+      <article class="card rv"><h3>Business Continuity &amp; Resilience</h3><ul class="tags"><li>ISO 22301 BCMS</li><li>SAMA BCMF</li><li>DBCM</li><li>BIA</li><li>BCP/DRP development &amp; testing</li></ul></article>
       <article class="card rv"><h3>International Standards</h3><ul class="tags"><li>ISO 27001:2022</li><li>ISO 22301</li><li>ISO 42001</li><li>ISO 62443</li><li>ISO 27005</li><li>NIST CSF</li><li>NIST RMF</li><li>NIST AI RMF</li><li>EU AI Act</li><li>DORA</li><li>NIS2</li><li>GDPR</li></ul></article>
       <article class="card rv"><h3>Emerging Specializations</h3><ul class="tags"><li>AI governance (ISO 42001 / NIST AI RMF / EU AI Act / CSA AICM)</li><li>Agentic AI</li><li>Cloud security (CSA CCM)</li><li>Operational resilience (DORA/NIS2)</li></ul></article>
-      <article class="card rv"><h3>GRC &amp; Audit Domains</h3><ul class="tags"><li>Compliance auditing</li><li>IT &amp; security audit</li><li>BCMS/BCP/DRP</li><li>OT/ICS assessment</li><li>App security</li><li>Cloud security</li><li>Data privacy</li><li>IS awareness training</li></ul></article>
-      <article class="card rv"><h3>Security Tools &amp; Platforms</h3><ul class="tags"><li>Tenable Nessus</li><li>OpenVAS</li><li>Nmap</li><li>Eramba GRC</li><li>OWASP ZAP</li><li>MS Purview</li></ul></article>
+      <article class="card rv"><h3>Audit &amp; Assurance</h3><ul class="tags"><li>Compliance auditing</li><li>IT &amp; security audit</li><li>ITGC</li><li>BCMS/BCP/DRP</li><li>OT/ICS security assessment</li><li>Application security</li><li>Cloud security</li><li>Data privacy &amp; governance</li><li>Awareness training</li></ul></article>
+      <article class="card rv"><h3>Security Tools &amp; Platforms</h3><ul class="tags"><li>Tenable Nessus</li><li>OpenVAS</li><li>Nmap</li><li>Eramba GRC</li><li>OWASP ZAP</li><li>Microsoft Purview</li></ul></article>
+      <article class="card rv"><h3>Industries</h3><ul class="tags"><li>Banking &amp; financial services</li><li>Energy &amp; utilities</li><li>Defense &amp; government</li><li>Healthcare</li><li>Telecom</li><li>Critical infrastructure</li></ul></article>
     </div>
   </div>
 </section>
@@ -285,32 +286,33 @@ footer{border-top:1px solid var(--line);padding:var(--s4) 0;color:var(--muted);f
 
     <div class="sector rv">
       <h3>Banking &amp; Financial Services</h3>
-      <div class="eng"><div class="who">BUPA Arabia<span>KSA</span></div><div class="what">SAMA CSF &amp; BCMF maturity assessment; Insurance Authority framework assessment.</div></div>
-      <div class="eng"><div class="who">Kuwait Finance House (KFH)</div><div class="what">ISO 42001 AI Management System framework development.</div></div>
+      <div class="eng"><div class="who">BUPA Arabia<span>KSA</span></div><div class="what">SAMA CSF &amp; SAMA BCMF compliance and maturity assessment; Insurance Authority (IA) Framework Assessment.</div></div>
+      <div class="eng"><div class="who">Kuwait Finance House (KFH)<span>Kuwait</span></div><div class="what">ISO 42001 AI Management System framework development.</div></div>
       <div class="eng"><div class="who">Banque Saudi Fransi Capital<span>KSA</span></div><div class="what">NCA ECC assessment; cybersecurity strategy &amp; roadmap.</div></div>
-      <div class="eng"><div class="who">GO Money<span>KSA</span></div><div class="what">SAMA CSF end-to-end BCM framework development.</div></div>
-      <div class="eng"><div class="who">Wall Street Exchange Center<span>Dubai</span></div><div class="what">ISO 27001:2022 framework development &amp; internal audit.</div></div>
-      <div class="eng"><div class="who">Introspect Capital<span>UAE</span></div><div class="what">ISO 27001:2022 implementation support &amp; internal audit.</div></div>
+      <div class="eng"><div class="who">GO Money<span>KSA</span></div><div class="what">SAMA CSF end-to-end BCM framework development and implementation.</div></div>
+      <div class="eng"><div class="who">Wall Street Exchange Center<span>Dubai</span></div><div class="what">ISO 27001:2022 framework development, implementation, and internal audit.</div></div>
+      <div class="eng"><div class="who">Introspect Capital<span>UAE</span></div><div class="what">ISO 27001:2022 framework development, implementation support, and internal audit.</div></div>
+      <div class="eng"><div class="who">UXE</div><div class="what">Application Security Development Practices Assessment.</div></div>
     </div>
 
     <div class="sector rv">
       <h3>Energy, Utilities &amp; Critical Infrastructure</h3>
       <div class="eng"><div class="who">ADNOC<span>UAE</span></div><div class="what">Digital Business Continuity Management (DBCM) maturity assessment.</div></div>
-      <div class="eng"><div class="who">ADNOC Offshore<span>UAE</span></div><div class="what">OT cybersecurity assessment &amp; risk management (ISO 62443).</div></div>
-      <div class="eng"><div class="who">Dubai Cables (DUCAB)</div><div class="what">NIST CSF 2.0 cybersecurity assessment.</div></div>
+      <div class="eng"><div class="who">ADNOC Offshore<span>UAE</span></div><div class="what">OT cybersecurity assessment and risk management under ISO 62443 and internal OT framework.</div></div>
+      <div class="eng"><div class="who">Dubai Cables (DUCAB)<span>UAE</span></div><div class="what">NIST CSF 2.0 cybersecurity assessment.</div></div>
       <div class="eng"><div class="who">Emirates Steel Arkan<span>UAE</span></div><div class="what">Information security audit aligned to UAE IA.</div></div>
-      <div class="eng"><div class="who">Fujairah Asia Power Company (FAPCO)</div><div class="what">DoE CSF assessment, security framework development &amp; cybersecurity roadmap.</div></div>
+      <div class="eng"><div class="who">Fujairah Asia Power Company (FAPCO)<span>UAE</span></div><div class="what">DoE CSF assessment, security framework development &amp; cybersecurity roadmap.</div></div>
     </div>
 
     <div class="sector rv">
       <h3>Defense &amp; Government, Healthcare, Telecom &amp; International</h3>
-      <div class="eng"><div class="who">TAWAZUN Council<span>UAE</span></div><div class="what">Defense-sector UAE IA &amp; NIST CSF compliance assessments.</div></div>
+      <div class="eng"><div class="who">TAWAZUN Council<span>UAE</span></div><div class="what">Defense-sector UAE IA and NIST CSF compliance and maturity assessments.</div></div>
       <div class="eng"><div class="who">Emirates International Hospital<span>UAE</span></div><div class="what">ADHICS compliance consultancy.</div></div>
-      <div class="eng"><div class="who">GO Telecom<span>KSA</span></div><div class="what">ISO 27001:2022 &amp; NCA ECC/CCC security assessment.</div></div>
+      <div class="eng"><div class="who">GO Telecom<span>KSA</span></div><div class="what">ISO 27001:2022 and NCA ECC/CCC aligned security assessment, framework development.</div></div>
       <div class="eng"><div class="who">ACX International<span>Armenia</span></div><div class="what">ISO 27001:2022 internal audit.</div></div>
     </div>
 
-    <p class="note">Plus 12+ additional regulated organizations across insurance, trade finance &amp; telecom — full list available on request.</p>
+    <p class="note">Additional engagements: Chedid Insurance Broker, ITFC, MIPCO, SCIPCO, TradEx, SINYAR Holding, EdenRed, TAKWEEN AI, SECP, PTCL &amp; Ufone — details available on request.</p>
   </div>
 </section>
 
@@ -319,11 +321,42 @@ footer{border-top:1px solid var(--line);padding:var(--s4) 0;color:var(--muted);f
     <p class="eyebrow">Professional Experience</p>
     <h2>Career timeline.</h2>
     <ol class="timeline" style="list-style:none;margin-block:0;margin-right:0">
-      <li class="job rv"><time>Oct 2022 – Present</time><h3>Cybersecurity GRC &amp; Resilience Consultant</h3><p class="org">DTS Solution · Dubai, UAE (hybrid)</p><p>Lead compliance, risk, and business continuity engagements for GCC-regulated banking, energy, defense, and healthcare clients — ISO 27001/22301/42001 implementation, NCA ECC and SAMA CSF/BCMF assessments, OT security for oil &amp; gas operators, DoE CSF assessments for energy clients, ADHICS assessments for healthcare, and AI governance under NIST AI RMF and the EU AI Act.</p></li>
-      <li class="job rv"><time>Feb 2022 – Oct 2022</time><h3>Assistant Manager, Risk Management</h3><p class="org">Ufone Limited (PTCL Group) · Islamabad</p><p>IS risk management under the Etisalat Group Cybersecurity Framework (EGCSF); IT audits, compliance gap analysis, and cross-functional remediation.</p></li>
-      <li class="job rv"><time>Apr 2020 – Feb 2022</time><h3>ISMS Specialist</h3><p class="org">Inbox Business Technologies Limited · Islamabad</p><p>Built a full ISO 27001 ISMS and NIST CSF-aligned security program from the ground up, including risk assessments, vulnerability assessments, internal audits, and awareness training.</p></li>
-      <li class="job rv"><time>Oct 2019 – Apr 2020</time><h3>IS/IT Auditor (Officer Grade-I)</h3><p class="org">Askari Bank Limited · Islamabad</p><p>Audited banking applications, ITGCs, and internet/mobile banking platforms against ISO 27001 and internal control frameworks.</p></li>
-      <li class="job rv"><time>Jan 2019 – Sep 2019</time><h3>Senior Consultant, Technology Risk &amp; Cybersecurity</h3><p class="org">Ernst &amp; Young (EY) · Islamabad</p><p>Reviewed ITGCs and server-level controls; conducted BIA and BCP/DRP audits and ISO 27001-aligned risk assessments across multiple industries.</p></li>
+      <li class="job rv"><time>Oct 2022 – Present</time><h3>Cybersecurity GRC &amp; Resilience Consultant</h3><p class="org">DTS Solution – Cyber Security Redefined · Dubai, UAE (hybrid)</p>
+        <ul class="bul">
+          <li>Led 8 NCA ECC and SAMA CSF/BCMF compliance and maturity assessments for GCC-regulated clients across banking, energy, and government sectors, consistently delivering gap reports and remediation roadmaps within agreed project timelines.</li>
+          <li>Developed and implemented 10+ ISO-aligned programs – spanning ISO 27001:2022, ISO 22301, and ISO 42001 (AI Management System) – designing control sets, policies, and risk treatment plans tailored to GCC regulatory requirements, and guiding clients through certification initiation and achievement.</li>
+          <li>Pioneered AI governance compliance programs by conducting NIST AI RMF and EU AI Act assessments for clients deploying AI-driven systems, producing actionable compliance roadmaps ahead of regulatory enforcement timelines.</li>
+          <li>Led cybersecurity and risk assessments for 3 oil &amp; gas sector operators, including ADNOC Offshore – aligned with ISO 62443, ISO 27001/27005, and internal OT frameworks – identifying and prioritizing high-severity control gaps across industrial environments.</li>
+          <li>Delivered DoE Cybersecurity Framework (CSF) assessments and roadmap development for 3 energy sector organizations, including Fujairah Asia Power Company (FAPCO), strengthening critical infrastructure resilience.</li>
+          <li>Conducted ADHICS compliance assessments for 3 healthcare organizations and delivered data privacy compliance frameworks aligned with KSA PDPL, UAE PDPL, and GDPR for financial services clients – mapping data flows, classifying assets, and implementing controls to close regulatory gaps.</li>
+          <li>Built and led Business Continuity Management as a core service line – including a DBCM maturity assessment for ADNOC (UAE) and BCM framework development for multiple KSA-regulated organizations.</li>
+          <li>Developed and facilitated targeted Information Security Awareness Training programs for client workforces.</li>
+          <li>Drove cross-functional remediation efforts by coordinating with client technical, legal, and business teams – translating audit findings into prioritized action plans and tracking closure to completion.</li>
+        </ul></li>
+      <li class="job rv"><h3>Freelance Cybersecurity &amp; IT Audit Consultant</h3><p class="org">Independent (Fiverr and direct clients) · Remote</p>
+        <ul class="bul">
+          <li>IT Audit Consultancy (ITGC, ITAC): perform independent IT General Controls and IT Application Controls reviews covering access management, change management, IT operations (including backup and recovery) and system development, aligned with COBIT and supporting statutory financial audits under ISA 315; deliver rated findings and remediation recommendations.</li>
+          <li>Business Continuity Framework Development: design BCM frameworks aligned with ISO 22301, including policy, Business Impact Analysis, and BCP/DRP structure and testing approach.</li>
+          <li>Information Security Awareness Training Content Development: develop role-based awareness training content and materials for client workforces.</li>
+        </ul></li>
+      <li class="job rv"><time>Feb 2022 – Oct 2022</time><h3>Assistant Manager, Risk Management</h3><p class="org">Ufone Limited (PTCL Group) · Islamabad, Pakistan</p>
+        <ul class="bul">
+          <li>Executed IS risk management under the Etisalat Group Cybersecurity Framework (EGCSF); conducted IT audits and compliance gap analysis and coordinated cross-functional teams to prioritize and close audit findings within defined SLAs.</li>
+          <li>Assessed and reported on information security controls across enterprise systems, producing risk registers and remediation plans reviewed by senior management.</li>
+        </ul></li>
+      <li class="job rv"><time>Apr 2020 – Feb 2022</time><h3>ISMS Specialist</h3><p class="org">Inbox Business Technologies Limited · Islamabad, Pakistan</p>
+        <ul class="bul">
+          <li>Built and implemented a full ISO 27001 ISMS and NIST CSF-aligned security program from the ground up – including risk assessments under ISO 27005 and NIST RMF, control implementation, and policy documentation.</li>
+          <li>Conducted vulnerability assessments using Tenable Nessus, performed internal audits, and delivered employee security awareness training, significantly improving the organization's overall security maturity.</li>
+        </ul></li>
+      <li class="job rv"><time>Oct 2019 – Apr 2020</time><h3>IS/IT Auditor (Officer Grade-I)</h3><p class="org">Askari Bank Limited · Islamabad, Pakistan</p>
+        <ul class="bul">
+          <li>Audited banking applications, ITGCs, branchless banking, and internet/mobile banking platforms against ISO 27001 and internal control frameworks; reported findings to senior audit management with actionable remediation recommendations.</li>
+        </ul></li>
+      <li class="job rv"><time>Jan 2019 – Sep 2019</time><h3>Executive Consultant – Technology Risk &amp; Cybersecurity</h3><p class="org">Ernst &amp; Young (EY) · Islamabad, Pakistan</p>
+        <ul class="bul">
+          <li>Reviewed IT General Controls (ITGCs) and server-level controls for enterprise clients; conducted Business Impact Analysis (BIA) and BCP/DRP audits and executed ISO 27001-aligned risk assessments across multiple industries.</li>
+        </ul></li>
     </ol>
   </div>
 </section>
@@ -341,7 +374,7 @@ footer{border-top:1px solid var(--line);padding:var(--s4) 0;color:var(--muted);f
           <li><strong>CCSK</strong><span>CSA</span></li>
           <li><strong>CEH</strong><span>EC-Council</span></li>
           <li><strong>CC — Certified in Cybersecurity</strong><span>ISC2</span></li>
-          <li><strong>CISSP</strong><span>In progress, targeting 2026</span></li>
+          <li><strong>CISSP</strong><span>In progress, targeting mid 2027</span></li>
         </ul>
       </div>
       <div class="rv">
@@ -350,6 +383,11 @@ footer{border-top:1px solid var(--line);padding:var(--s4) 0;color:var(--muted);f
           <li><strong>MSc Information Technology (Information Security)</strong><span>Tampere University, Finland · 2023–2025</span></li>
           <li><strong>MS Information Security</strong><span>Riphah International University, Islamabad · 2016–2019</span></li>
           <li><strong>BS Computer Science</strong><span>Allama Iqbal Open University, Islamabad · 2010–2014</span></li>
+        </ul>
+        <h3 class="sub" style="margin-top:var(--s4)">Languages</h3>
+        <ul class="list">
+          <li><strong>English</strong><span>Professional working proficiency</span></li>
+          <li><strong>Urdu</strong><span>Native</span></li>
         </ul>
       </div>
     </div>
